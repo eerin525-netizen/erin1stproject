@@ -1,0 +1,24 @@
+/* Buttons: <Button variant="gold | ghost" size="md | sm"> */
+.btn {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 17px 36px;
+  border: 1px solid transparent; border-radius: 2px;
+  font-family: var(--sans); font-size: .78rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  cursor: pointer;
+  transition: transform .3s var(--ease), box-shadow .3s, background .3s, color .3s;
+}
+.btn.sm { padding: 11px 24px; font-size: .72rem; }
+.btn svg { transition: transform .4s var(--ease); }
+.btn:hover svg { transform: translateX(4px); }
+
+.btn-gold { background: linear-gradient(135deg, var(--gold-2), var(--gold)); color: var(--black); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(176, 141, 87, .35); }
+
+.btn-ghost {
+  color: #fff; border-color: rgba(255, 255, 255, .35);
+  background-image: linear-gradient(var(--gold-2), var(--gold-2)); background-repeat: no-repeat; background-size: 0% 100%;
+  transition: background-size .5s var(--ease), color .4s, border-color .4s;
+}
+.btn-ghost:hover { background-size: 100% 100%; color: var(--black); border-color: var(--gold-2); }

@@ -1,0 +1,25 @@
+/* Design tokens: the single source for colour, type and motion. */
+:root {
+  /* Palette: deep black, charcoal, antique gold, warm cream, white */
+  --black: #0a0a0a;
+  --charcoal: #1c1c1e;
+  --ink: #1a1a1a;
+  --gold: #b08d57;
+  --gold-2: #d9bf8c;      /* light gold, for text on dark */
+  --gold-text: #7a5a26;   /* dark gold, for text on cream/white (5:1+ contrast) */
+  --paper: #f5efe3;
+  --paper-2: #ebe3d2;
+  --white: #ffffff;
+  --muted: #6b665c;
+  --line-dark: rgba(255, 255, 255, .14);
+  --line-gold: rgba(176, 141, 87, .5);
+
+  /* Type */
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Layout & motion */
+  --container: 1160px;
+  --header-h: 72px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}

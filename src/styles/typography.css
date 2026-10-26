@@ -1,0 +1,33 @@
+/* Shared text styles: eyebrow label, lead paragraph, text link, animated words. */
+.eyebrow {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 1.2rem;
+  font-family: var(--sans); font-size: .72rem; font-weight: 500;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--gold-text);
+}
+.center .eyebrow { justify-content: center; }
+.hero .eyebrow, .page-hero .eyebrow, .tone-charcoal .eyebrow, .tone-spotlight .eyebrow { color: var(--gold-2); }
+.eyebrow-line { display: block; flex: none; width: 40px; height: 1px; background: currentColor; transform-origin: left center; }
+
+.lead { max-width: 38rem; font-size: 1.2rem; font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, .78); }
+.narrow { margin-bottom: 2em; }
+.center .narrow { max-width: 560px; margin-inline: auto; }
+.tone-spotlight .narrow { margin-top: 1.4rem; color: rgba(255, 255, 255, .72); }
+
+.text-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding-bottom: 4px;
+  font-size: .78rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink); border-bottom: 1px solid var(--gold-text);
+  transition: gap .3s var(--ease);
+}
+.text-link:hover { gap: 16px; }
+
+/* Words of an AnimatedHeading rise out of a mask */
+.word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .14em; margin-bottom: -.14em; }
+.word-in { display: inline-block; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .word, .word-in { overflow: visible; transform: none !important; }
+}

@@ -1,0 +1,11 @@
+/* Global stylesheet entry. Order matters: tokens → base → layout → shared pieces → sections. */
+@import './tokens.css';
+@import './base.css';
+@import './layout.css';
+@import './typography.css';
+@import './buttons.css';
+@import './navigation.css';
+@import './footer.css';
+@import './forms.css';
+@import './hero.css';
+@import './sections.css';

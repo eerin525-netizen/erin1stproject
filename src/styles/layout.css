@@ -1,0 +1,30 @@
+/* Page structure: container, section bands and their background tones. */
+.container { width: min(var(--container), 100% - 48px); margin-inline: auto; }
+.section { padding: clamp(88px, 12vw, 160px) 0; }
+.center { text-align: center; }
+.center p { max-width: none; }
+
+/* Section tones */
+.alt { background: var(--paper-2); }
+.tone-white { background: var(--white); }
+.tone-charcoal { background: linear-gradient(180deg, var(--charcoal), var(--black)); color: #fff; }
+.tone-spotlight {
+  background: radial-gradient(ellipse at 50% 0%, #2b2418 0%, transparent 60%), var(--black);
+  color: #fff;
+  padding-block: clamp(90px, 12vw, 160px);
+}
+.tone-spotlight h2 { font-size: clamp(2.4rem, 6vw, 4.6rem); }
+
+/* Gold accents: bright gold on dark bands, darker gold on light ones */
+.tone-charcoal h2 em, .tone-spotlight h2 em, .hero h1 em, .page-hero h1 em { color: var(--gold); }
+
+/* Two-column text layouts and section headings */
+.two-col { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 7vw, 100px); align-items: start; }
+.two-col p { max-width: none; color: var(--muted); font-size: 1.1rem; font-weight: 300; }
+.head { margin-bottom: 4rem; }
+.split { display: flex; justify-content: space-between; align-items: end; gap: 40px; flex-wrap: wrap; }
+.head-note { max-width: 380px; margin: 0; color: rgba(255, 255, 255, .6); }
+
+@media (max-width: 860px) {
+  .two-col { grid-template-columns: 1fr; }
+}
